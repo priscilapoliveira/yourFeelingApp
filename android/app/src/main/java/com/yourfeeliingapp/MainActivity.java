@@ -2,6 +2,23 @@ package com.yourfeeliingapp;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;
+import com.facebook.react.bridge.JSIModulePackage; 
+import com.swmansion.reanimated.ReanimatedJSIModulePackage; 
+
+
+
+private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+
+      @Override
+      protected String getJSMainModuleName() {
+        return "index";
+      }
+
+      @Override
+      protected JSIModulePackage getJSIModulePackage() {
+        return new ReanimatedJSIModulePackage(); // <- add
+      }
+    };
 
 public class MainActivity extends ReactActivity {
 
