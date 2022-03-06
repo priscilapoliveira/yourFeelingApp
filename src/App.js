@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from "react";
+import React, { useEffect } from 'react'
 
 import {
   SafeAreaView,
@@ -14,28 +14,34 @@ import {
   StyleSheet,
   View,
   useColorScheme,
-} from "react-native";
+} from 'react-native'
 
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer } from '@react-navigation/native'
 
-import PublicRoutes from "./routes/publicRoute";
+import PublicRoutes from './routes/publicRoute'
 
-import { colors } from "./styles/colors";
+import SplashScreen from 'react-native-splash-screen'
+
+import { colors } from './styles/colors'
 
 const App = () => {
+  useEffect(() => {
+    SplashScreen.hide()
+  }, [])
+
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor="transparent" />
+      <StatusBar backgroundColor='transparent' />
       <PublicRoutes />
     </NavigationContainer>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   backgroundStyle: {
     flex: 1,
     // backgroundColor: colors.white,
   },
-});
+})
 
-export default App;
+export default App
