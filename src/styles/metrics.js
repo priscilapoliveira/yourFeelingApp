@@ -1,7 +1,3 @@
-import { Dimensions, Platform } from "react-native";
-
-const { width, height } = Dimensions.get("window");
-
 const metrics = {
   // 8pt grid
   pixel: 8,

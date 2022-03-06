@@ -1,2 +1,4 @@
-export * from "./metrics";
-export * from "./colors";
+import colors from "./colors";
+import metrics from "./metrics";
+
+export { metrics, colors };
