@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React from 'react'
 
-import { View, Text } from "react-native";
+import { View, Text } from 'react-native'
 
-import styles from "./styles";
+import styles from './styles'
 
 const Welcome = () => {
   return (
@@ -11,7 +11,7 @@ const Welcome = () => {
         <Text style={styles.text}>Teste</Text>
       </View>
     </>
-  );
-};
+  )
+}
 
-export default Welcome;
+export default Welcome

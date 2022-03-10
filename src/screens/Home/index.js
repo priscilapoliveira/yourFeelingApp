@@ -1,11 +1,18 @@
-import React from "react";
+import React from 'react'
+import { View, Text, ScrollView } from 'react-native'
 
-import { Text } from "react-native";
+import Bubbles from '../../components/Bubbles'
 
-import styles from "./styles";
+import styles from './styles'
 
-const Home = () => {
-  return <></>;
-};
+const Home = async () => {
+  return (
+    <>
+      <View style={styles.container}>
+        <Bubbles />
+      </View>
+    </>
+  )
+}
 
-export default Home;
+export default Home
