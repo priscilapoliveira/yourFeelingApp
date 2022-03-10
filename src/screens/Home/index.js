@@ -6,6 +6,7 @@ import api from '../../services/api'
 import Bubbles from '../../components/Bubbles'
 
 import styles from './styles'
+import { useCallback } from 'react/cjs/react.development'
 
 const Home = () => {
   const [data, setData] = useState([])

@@ -22,8 +22,6 @@ import PublicRoutes from './routes/publicRoute'
 
 import SplashScreen from 'react-native-splash-screen'
 
-import { colors } from './styles/colors'
-
 const App = () => {
   useEffect(() => {
     SplashScreen.hide()
@@ -36,12 +34,5 @@ const App = () => {
     </NavigationContainer>
   )
 }
-
-const styles = StyleSheet.create({
-  backgroundStyle: {
-    flex: 1,
-    // backgroundColor: colors.white,
-  },
-})
 
 export default App

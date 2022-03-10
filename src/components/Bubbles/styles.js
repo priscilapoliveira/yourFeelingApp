@@ -12,19 +12,19 @@ const styles = StyleSheet.create({
   baseBubble: {
     width: metrics.doublePixel,
     height: metrics.doublePixel,
-    borderRadius: '50%',
+    borderRadius: metrics.triplePixel * 2 + 4,
     padding: metrics.pixel * 2,
   },
   mediumBubble: {
     width: metrics.triplePixel,
     height: metrics.triplePixel * 3,
-    borderRadius: '50%',
+    borderRadius: metrics.triplePixel * 2 + 4,
     padding: metrics.pixel * 4,
   },
   largeBubble: {
     width: metrics.fourFoldPixel,
     height: metrics.fourFoldPixel,
-    borderRadius: '50%',
+    borderRadius: metrics.triplePixel * 2 + 4,
     padding: metrics.pixel * 6,
   },
   emoji: {

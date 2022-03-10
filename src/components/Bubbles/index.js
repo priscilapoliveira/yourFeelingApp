@@ -4,11 +4,11 @@ import { View, TouchableOpacity, Text } from 'react-native'
 
 import styles from './styles'
 
-const Bubbles = () => {
+const Bubbles = ({ emoji }) => {
   return (
     <>
-      <View styles={styles.container}>
-        <Text>Entrei</Text>
+      <View style={styles.container}>
+        <TouchableOpacity emoji={emoji} style={[styles.baseBubble]} />
       </View>
     </>
   )
