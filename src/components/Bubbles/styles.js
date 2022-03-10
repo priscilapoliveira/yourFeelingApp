@@ -19,14 +19,14 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   smallBubble: {
-    width: metrics.triplePixel,
-    height: metrics.triplePixel,
+    padding: metrics.doublePixel + 4,
+    margin: metrics.doublePixel + 4,
+  },
+  mediumBubble: {
     padding: metrics.triplePixel,
     margin: metrics.triplePixel,
   },
   largeBubble: {
-    width: metrics.fourFoldPixel,
-    height: metrics.fourFoldPixel,
     padding: metrics.triplePixel,
     margin: metrics.triplePixel,
   },
