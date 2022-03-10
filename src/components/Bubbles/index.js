@@ -8,7 +8,7 @@ const Bubbles = ({ emoji }) => {
   return (
     <>
       <View style={styles.container}>
-        <TouchableOpacity emoji={emoji} style={[styles.baseBubble]} />
+        <TouchableOpacity emoji={emoji} style={[styles.smallBubble]} />
       </View>
     </>
   )

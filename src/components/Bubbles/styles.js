@@ -6,26 +6,19 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primaryLight,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: metrics.doublePixel / 1.5,
-    margin: metrics.doublePixel / 1.5,
+    borderRadius: 150,
   },
-  baseBubble: {
-    width: metrics.doublePixel,
-    height: metrics.doublePixel,
-    borderRadius: metrics.triplePixel * 2 + 4,
-    padding: metrics.pixel * 2,
-  },
-  mediumBubble: {
+  smallBubble: {
     width: metrics.triplePixel,
-    height: metrics.triplePixel * 3,
-    borderRadius: metrics.triplePixel * 2 + 4,
-    padding: metrics.pixel * 4,
+    height: metrics.triplePixel,
+    padding: metrics.triplePixel,
+    margin: metrics.triplePixel,
   },
   largeBubble: {
     width: metrics.fourFoldPixel,
     height: metrics.fourFoldPixel,
-    borderRadius: metrics.triplePixel * 2 + 4,
-    padding: metrics.pixel * 6,
+    padding: metrics.triplePixel,
+    margin: metrics.triplePixel,
   },
   emoji: {
     fontSize: metrics.pixel,
