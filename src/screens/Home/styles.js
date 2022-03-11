@@ -1,16 +1,21 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 import { metrics, colors } from '../../styles'
+
+const { width, height } = Dimensions.get('window')
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    width: width,
+    height: height,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     backgroundColor: colors.primary,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    padding: metrics.pixel,
   },
-  text: {
-    fontWeight: 'bold',
-    fontSize: metrics.doublePixel,
+  content: {
+    backgroundColor: colors.primary,
   },
 })
 

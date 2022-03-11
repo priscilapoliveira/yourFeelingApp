@@ -1,11 +1,14 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 import { metrics, colors } from '../../styles'
+
+const { width, height } = Dimensions.get('window')
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.primaryLight,
-    justifyContent: 'center',
     alignItems: 'center',
+    marginHorizontal: 1.7,
+    marginVertical: 1.5,
     borderRadius: 150,
     shadowRadius: 200,
     shadowColor: '#000',
@@ -15,31 +18,28 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-
     elevation: 5,
   },
   smallBubble: {
-    padding: metrics.doublePixel + 4,
-    margin: metrics.doublePixel + 4,
+    width: metrics.triplePixel * 3,
+    height: metrics.triplePixel * 3,
+    padding: metrics.pixel * 2,
   },
   mediumBubble: {
-    padding: metrics.triplePixel,
-    margin: metrics.triplePixel,
+    width: metrics.fourFoldPixel * 3,
+    height: metrics.fourFoldPixel * 3,
+    padding: metrics.pixel * 3,
   },
   largeBubble: {
-    padding: metrics.triplePixel,
-    margin: metrics.triplePixel,
+    width: metrics.fiveFoldPixel * 3,
+    height: metrics.fiveFoldPixel * 3,
+    padding: metrics.pixel * 4,
   },
-  emoji: {
-    fontSize: metrics.pixel,
-    padding: metrics.pixel / 2,
-  },
-  description: {
+  text: {
+    fontSize: metrics.doublePixel,
+    textAlign: 'center',
     color: colors.white,
     fontWeight: '500',
-    fontSize: metrics.pixel,
-    textAlign: 'center',
-    textTransform: 'capitalize',
   },
 })
 

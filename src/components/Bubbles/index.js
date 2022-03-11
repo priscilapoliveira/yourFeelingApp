@@ -4,22 +4,24 @@ import { View, TouchableOpacity, Text } from 'react-native'
 
 import styles from './styles'
 
-const Bubbles = ({ emoji = '', description = '' }) => {
+const Bubbles = ({ emoji = ' ', description = ' ' }) => {
   return (
     <>
-      <View style={styles.container}>
-        <TouchableOpacity
-          emoji={emoji}
-          description={description}
+      <TouchableOpacity style={styles.container}>
+        <Text
           style={[
-            description.length >= 4
+            styles.text,
+            description.length <= 3
               ? styles.smallBubble
-              : description.length >= 6
+              : description.length <= 5
               ? styles.mediumBubble
               : styles.largeBubble,
-          ]}
-        />
-      </View>
+          ]}>
+          {emoji}
+          {'\n'}
+          {description}
+        </Text>
+      </TouchableOpacity>
     </>
   )
 }

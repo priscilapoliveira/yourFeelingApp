@@ -8,19 +8,14 @@
 
 import React, { useEffect } from 'react'
 
-import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  View,
-  useColorScheme,
-} from 'react-native'
+import { StatusBar, View } from 'react-native'
 
 import { NavigationContainer } from '@react-navigation/native'
 
 import PublicRoutes from './routes/publicRoute'
 
 import SplashScreen from 'react-native-splash-screen'
+import { colors } from './styles'
 
 const App = () => {
   useEffect(() => {
@@ -28,10 +23,12 @@ const App = () => {
   }, [])
 
   return (
-    <NavigationContainer>
-      <StatusBar backgroundColor='transparent' />
-      <PublicRoutes />
-    </NavigationContainer>
+    <View style={{ flex: 1, backgroundColor: colors.primary }}>
+      <NavigationContainer>
+        <StatusBar backgroundColor='transparent' />
+        <PublicRoutes />
+      </NavigationContainer>
+    </View>
   )
 }
 
