@@ -35,6 +35,7 @@ const Home = () => {
             dataFeelings.map((feeling) => {
               return (
                 <Bubbles
+                  key={feeling.emoji}
                   onPress={() =>
                     navigation.navigate('RateFeellings', {
                       emoji: feeling.emoji,
