@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { View, Text, ScrollView } from 'react-native'
+import { View, ScrollView } from 'react-native'
+
+import { useNavigation } from '@react-navigation/native'
 
 import api from '../../services/api'
 
@@ -7,47 +9,49 @@ import Header from '../../components/Header'
 import Bubbles from '../../components/Bubbles'
 
 import styles from './styles'
-import { useCallback } from 'react/cjs/react.development'
 
 const Home = () => {
-  const [data, setData] = useState([])
+  const navigation = useNavigation()
+  const [dataFeelings, setDataFeelings] = useState([])
 
   useEffect(() => {
     api
       .get()
-      .then((response) => {
-        const { data } = response.data
+      .then((res) => {
+        var body = res.data
 
-        setData(data)
+        setDataFeelings(body.feelings)
       })
       .catch((error) => console.log(error))
-  }, [setData])
+  }, [setDataFeelings])
 
   return (
     <>
-      <Header />
+      <Header title={'How are you feeling?'} />
 
       <ScrollView style={styles.content}>
         <View style={styles.container}>
-          <Bubbles emoji={'😁'} description={'xxxxx'} />
-          <Bubbles emoji={'😁'} description={'sadsas asd'} />
-          <Bubbles emoji={'😁'} description={'xxx'} />
-          <Bubbles emoji={'😁'} description={'sadsas asd'} />
-          <Bubbles emoji={'😁'} description={'samuel'} />
-          <Bubbles emoji={'😁'} description={'xxx'} />
-          <Bubbles emoji={'😁'} description={'xxx'} />
-          <Bubbles emoji={'😁'} description={'samuel'} />
-          <Bubbles emoji={'😁'} description={'xxxxx'} />
-          <Bubbles emoji={'😁'} description={'xxx'} />
-          <Bubbles emoji={'😁'} description={'samuel'} />
-          <Bubbles emoji={'😁'} description={'sadsas asd'} />
-          <Bubbles emoji={'😁'} description={'samuel'} />
-          <Bubbles emoji={'😁'} description={'xxx'} />
-          <Bubbles emoji={'😁'} description={'sadsas asd'} />
+          {dataFeelings && dataFeelings.length ? (
+            dataFeelings.map((feeling) => {
+              return (
+                <Bubbles
+                  onPress={() =>
+                    navigation.navigate('RateFeellings', {
+                      emoji: feeling.emoji,
+                      text: feeling.text,
+                    })
+                  }
+                  emoji={feeling.emoji}
+                  description={feeling.text}
+                />
+              )
+            })
+          ) : (
+            <></>
+          )}
         </View>
       </ScrollView>
     </>
   )
 }
-
 export default Home

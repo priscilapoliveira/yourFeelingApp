@@ -1,13 +1,18 @@
 import React from 'react'
 
-import { View, TouchableOpacity, Text } from 'react-native'
+import { TouchableOpacity, Text } from 'react-native'
 
 import styles from './styles'
 
-const Bubbles = ({ emoji = ' ', description = ' ' }) => {
+const Bubbles = ({ emoji = '', description = '', onPress }) => {
   return (
     <>
-      <TouchableOpacity style={styles.container}>
+      <TouchableOpacity
+        onPress={onPress}
+        activeOpacity={0.15}
+        pressMagnification={2}
+        pressDuration={0.3}
+        style={styles.container}>
         <Text
           style={[
             styles.text,

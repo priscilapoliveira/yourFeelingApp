@@ -3,11 +3,11 @@ import { View, Text } from 'react-native'
 
 import styles from './styles'
 
-const Header = () => {
+const Header = ({ title }) => {
   return (
     <>
       <View style={styles.container}>
-        <Text style={styles.title}>How are you feeling? </Text>
+        <Text style={styles.title}>{title}</Text>
       </View>
     </>
   )

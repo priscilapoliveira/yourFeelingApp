@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from 'react'
 
-import styles from "./styles";
+import { useRoute, useNavigation } from '@react-navigation/native'
+
+import styles from './styles'
 
 const RateFeelings = () => {
-  return <></>;
-};
+  const route = useRoute()
+  useEffect(() => {
+    let eita = ({ emoji, text } = route.params)
+    console.log(eita)
+  }, [route])
 
-export default RateFeelings;
+  return <></>
+}
+
+export default RateFeelings
