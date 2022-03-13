@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 
+import { View } from 'react-native'
+
 import { useRoute, useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
@@ -11,7 +13,11 @@ const RateFeelings = () => {
     console.log(eita)
   }, [route])
 
-  return <></>
+  return (
+    <>
+      <View></View>
+    </>
+  )
 }
 
 export default RateFeelings
