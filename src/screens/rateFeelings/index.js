@@ -5,6 +5,7 @@ import { useRoute, useNavigation } from '@react-navigation/native'
 import LinearGradient from 'react-native-linear-gradient'
 
 import Header from '../../components/Header'
+import Button from '../../components/Button'
 
 import styles from './styles'
 
@@ -35,6 +36,7 @@ const RateFeelings = () => {
             {rateFeeling} {paramsFeelings.text}
           </Text>
         </View>
+        <Button>Next</Button>
       </LinearGradient>
     </>
   )

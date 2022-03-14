@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flexWrap: 'wrap',
+    marginBottom: metrics.doublePixel,
   },
   feelingEmoji: {
     fontSize: metrics.fiveFoldPixel + 20,
