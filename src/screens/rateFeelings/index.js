@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 
 import { useRoute, useNavigation } from '@react-navigation/native'
@@ -6,6 +6,8 @@ import LinearGradient from 'react-native-linear-gradient'
 
 import Header from '../../components/Header'
 import Button from '../../components/Button'
+
+import ModalSuccess from '../../components/ModalSuccess'
 
 import heart from '../../assets/images/heart.png'
 import heartOutlined from '../../assets/images/heart-outlined.png'
@@ -19,13 +21,29 @@ const RateFeelings = () => {
   const [showButton, setShowButton] = useState(false)
   const [rate, setRate] = useState(0)
   const [feelingText, setFeelingText] = useState('')
+  const [closed, setClosed] = useState(false)
+  const [visible, setViseble] = useState(false)
 
   useEffect(() => {
     setParamsFeeling(route.params)
   }, [route, setParamsFeeling])
 
+  const onReturneAndDisableModal = useCallback(() => {
+    setViseble(false)
+    setClosed(true)
+    navigation.push('Home')
+  }, [setViseble, setClosed, navigation])
+
   return (
     <>
+      <ModalSuccess
+        isVisible={visible}
+        onClosed={closed}
+        text={'Save with success'}
+        subText={'congratulation, you save your feelings today!'}
+        onPress={() => onReturneAndDisableModal()}
+      />
+
       <Header backBlack back={'<'} onPress={navigation.goBack} />
 
       <LinearGradient
@@ -148,7 +166,7 @@ const RateFeelings = () => {
           primaryTextButton
           text={'Next'}
           onPress={() => {
-            // avaliar();
+            setViseble(true)
           }}
         />
 

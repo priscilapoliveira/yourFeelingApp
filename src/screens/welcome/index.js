@@ -1,14 +1,27 @@
 import React from 'react'
 
-import { View, Text } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+
+import { View, Text, Image } from 'react-native'
+
+import Button from '../../components/Button'
+
+import welcome from '../../assets/images/welcome.png'
 
 import styles from './styles'
 
 const Welcome = () => {
+  const navigation = useNavigation()
   return (
     <>
       <View style={styles.container}>
-        <Text style={styles.text}>Teste</Text>
+        <Image source={welcome} style={styles.image} />
+        <Text style={styles.title}>Welcome, shall we begin?</Text>
+        <Button
+          onPress={navigation.navigate('Home')}
+          primaryTextButton
+          text={'Go'}
+        />
       </View>
     </>
   )

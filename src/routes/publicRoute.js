@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator()
 
 const PublicRoute = () => (
   <Stack.Navigator
-    initialRouteName='Home'
+    initialRouteName='Welcome'
     screenOptions={{ gestureEnabled: false, header: () => null }}>
     <Stack.Screen name='Welcome' component={Welcome} />
     <Stack.Screen name='Home' component={Home} />

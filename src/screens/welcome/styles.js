@@ -8,9 +8,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.primary,
   },
-  text: {
-    fontWeight: 'bold',
-    fontSize: metrics.doublePixel,
+  title: {
+    fontSize: metrics.triplePixel,
+    textAlign: 'center',
+    color: colors.white,
+    fontWeight: '500',
+    marginBottom: metrics.triplePixel,
+  },
+  image: {
+    width: metrics.fiveFoldPixel * 4,
+    resizeMode: 'contain',
   },
 })
 
