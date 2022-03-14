@@ -25,6 +25,14 @@ const styles = StyleSheet.create({
     color: colors.black,
     fontWeight: 'bold',
   },
+  subTitle: {
+    marginTop: metrics.pixel,
+    textAlign: 'center',
+    fontSize: metrics.doublePixel,
+    color: colors.black,
+    opacity: 0.45,
+    fontWeight: 'bold',
+  },
   feelingText: {
     textAlign: 'center',
     fontSize: metrics.fourFoldPixel,
@@ -37,7 +45,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: metrics.doublePixel,
+    paddingHorizontal: metrics.pixel + 4,
     marginBottom: metrics.doublePixel,
   },
   labelHearOutlinedtDefault: {
@@ -92,7 +100,7 @@ const styles = StyleSheet.create({
   },
   heartImageOutlined: {
     marginTop: metrics.pixel,
-    width: metrics.triplePixel + 4,
+    width: metrics.triplePixel,
     alignSelf: 'center',
     height: metrics.triplePixel + 4,
     resizeMode: 'contain',

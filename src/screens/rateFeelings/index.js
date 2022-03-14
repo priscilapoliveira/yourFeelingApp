@@ -18,6 +18,7 @@ const RateFeelings = () => {
   const [paramsFeelings, setParamsFeeling] = useState({})
   const [showButton, setShowButton] = useState(false)
   const [rate, setRate] = useState(0)
+  const [feelingText, setFeelingText] = useState('')
 
   useEffect(() => {
     setParamsFeeling(route.params)
@@ -36,13 +37,19 @@ const RateFeelings = () => {
         <Text style={styles.feelingEmoji}>{paramsFeelings.emoji}</Text>
         <View style={styles.content}>
           <Text style={styles.title}>I'm feeling</Text>
-          <Text style={styles.feelingText}>{paramsFeelings.text}</Text>
+          <Text style={styles.feelingText}>
+            {feelingText}
+            {paramsFeelings.text}
+          </Text>
+          <Text style={styles.subTitle}>
+            Choose the intensity of yout feeling
+          </Text>
         </View>
         <View style={styles.contentRate}>
           {rate >= 0 ? (
             <TouchableOpacity
               onPress={() => {
-                if (showButton) setRate(0)
+                if (showButton) setRate(0), setFeelingText(Slightly)
               }}>
               <Text style={styles.labelHeartSlightly}>0%</Text>
               <Image source={heart} style={styles.heartImageSlightly} />
@@ -62,17 +69,14 @@ const RateFeelings = () => {
           {rate >= 1 ? (
             <TouchableOpacity
               onPress={() => {
-                if (showButton) setRate(1)
+                if (showButton) setRate(1), setFeelingText(A + little)
               }}>
               <Text style={styles.labelHeartLittle}>25%</Text>
               <Image source={heart} style={styles.heartImageLittle} />
               <Text style={styles.labelHeartLittle}>A little</Text>
             </TouchableOpacity>
           ) : (
-            <TouchableOpacity
-              onPress={() => {
-                if (showButton) setRate(2)
-              }}>
+            <TouchableOpacity onPress={() => {}}>
               <Text style={styles.labelHearOutlinedtDefault}>25</Text>
               <Image source={heartOutlined} style={styles.heartImageOutlined} />
               <Text style={styles.labelHeartOutlined}>A little</Text>
@@ -82,7 +86,7 @@ const RateFeelings = () => {
           {rate >= 2 ? (
             <TouchableOpacity
               onPress={() => {
-                if (showButton) setRate(2)
+                if (showButton) setRate(2), setFeelingText(Fairly)
               }}>
               <Text style={styles.labelHeartFairly}>50%</Text>
               <Image source={heart} style={styles.heartImageFairly} />
@@ -102,7 +106,7 @@ const RateFeelings = () => {
           {rate >= 3 ? (
             <TouchableOpacity
               onPress={() => {
-                if (showButton) setRate(3)
+                if (showButton) setRate(3), setFeelingText(Very)
               }}>
               <Text style={styles.labelHeartVery}>75%</Text>
               <Image source={heart} style={styles.heartImageVery} />
@@ -121,7 +125,7 @@ const RateFeelings = () => {
           {rate >= 4 ? (
             <TouchableOpacity
               onPress={() => {
-                if (showButton) setRate(4)
+                if (showButton) setRate(4), setFeelingText(Extremely)
               }}>
               <Text style={styles.labelHeartExtremely}>100%</Text>
               <Image source={heart} style={styles.heartImageExtremely} />
