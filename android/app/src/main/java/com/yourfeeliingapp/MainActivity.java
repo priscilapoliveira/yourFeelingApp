@@ -1,24 +1,10 @@
+
 package com.yourfeeliingapp;
 
-import com.facebook.react.ReactActivity;
+
 import android.os.Bundle;
-import com.facebook.react.bridge.JSIModulePackage; 
-import com.swmansion.reanimated.ReanimatedJSIModulePackage; 
-
-
-
-private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
-
-      @Override
-      protected String getJSMainModuleName() {
-        return "index";
-      }
-
-      @Override
-      protected JSIModulePackage getJSIModulePackage() {
-        return new ReanimatedJSIModulePackage(); // <- add
-      }
-    };
+import com.facebook.react.ReactActivity;
+import org.devio.rn.splashscreen.SplashScreen;
 
 public class MainActivity extends ReactActivity {
 
@@ -33,7 +19,8 @@ public class MainActivity extends ReactActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
-  super.onCreate(null);
-}
-  
+    SplashScreen.show(this, true);
+    super.onCreate(null);
+  }
+
 }
