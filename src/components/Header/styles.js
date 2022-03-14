@@ -3,12 +3,33 @@ import { colors, metrics } from '../../styles'
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: metrics.fiveFoldPixel + 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingTop: metrics.fiveFoldPixel + 15,
     paddingBottom: metrics.pixel + 4,
   },
-  title: {
-    fontSize: metrics.doublePixel + 3,
+  whitetitle: {
     textAlign: 'center',
+    fontSize: metrics.doublePixel,
+    color: colors.white,
+    fontWeight: 'bold',
+  },
+  buttonContainer: {
+    paddingHorizontal: metrics.doublePixel + 4,
+  },
+  textContainer: {
+    paddingHorizontal: metrics.fiveFoldPixel + metrics.pixel,
+  },
+
+  backBlack: {
+    textAlign: 'center',
+    fontSize: metrics.pixel + 4,
+    color: colors.black,
+    fontWeight: 'bold',
+  },
+  backWhite: {
+    textAlign: 'center',
+    fontSize: metrics.pixel + 4,
     color: colors.white,
     fontWeight: 'bold',
   },

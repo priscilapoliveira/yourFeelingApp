@@ -1,12 +1,11 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 
 import styles from './styles'
 
-const Header = ({ title, primary, white }) => {
-  const stylesHeader = [styles.container]
-  var white
+const Header = ({ title, back, backBlack, backWhite, primary, whiteTitle }) => {
   var primary
+  var backWhite
 
   return (
     <>
@@ -15,7 +14,18 @@ const Header = ({ title, primary, white }) => {
           styles.container,
           primary ? styles.primaryColor : styles.whiteColor,
         ]}>
-        <Text style={styles.title}>{title}</Text>
+        <TouchableOpacity style={styles.button}>
+          <Text
+            style={[
+              styles.buttonContainer,
+              backWhite ? styles.backWhite : styles.backBlack,
+            ]}>
+            {back}
+          </Text>
+        </TouchableOpacity>
+        <View style={styles.textContainer}>
+          <Text style={styles.whitetitle}>{title}</Text>
+        </View>
       </View>
     </>
   )

@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 
 import { View } from 'react-native'
-
 import { useRoute, useNavigation } from '@react-navigation/native'
+
+import Header from '../../components/Header'
 
 import styles from './styles'
 
@@ -15,6 +16,7 @@ const RateFeelings = () => {
 
   return (
     <>
+      <Header backBlack back={'voltar'} />
       <View></View>
     </>
   )

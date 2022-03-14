@@ -9,7 +9,6 @@ import Header from '../../components/Header'
 import Bubbles from '../../components/Bubbles'
 
 import styles from './styles'
-import { colors } from '../../styles'
 
 const Home = () => {
   const navigation = useNavigation()
@@ -28,7 +27,12 @@ const Home = () => {
 
   return (
     <>
-      <Header primary title={'How are you feeling?'} />
+      <Header
+        backWhite
+        back={'voltar'}
+        primary
+        title={'How are you feeling?'}
+      />
 
       <ScrollView style={styles.content}>
         <View style={styles.container}>
