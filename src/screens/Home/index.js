@@ -27,12 +27,7 @@ const Home = () => {
 
   return (
     <>
-      <Header
-        backWhite
-        back={'voltar'}
-        primary
-        title={'How are you feeling?'}
-      />
+      <Header backWhite back={'<'} primary title={'How are you feeling?'} />
 
       <ScrollView style={styles.content}>
         <View style={styles.container}>

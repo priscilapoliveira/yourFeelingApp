@@ -3,7 +3,15 @@ import { View, Text, TouchableOpacity } from 'react-native'
 
 import styles from './styles'
 
-const Header = ({ title, back, backBlack, backWhite, primary, whiteTitle }) => {
+const Header = ({
+  title,
+  back,
+  backBlack,
+  backWhite,
+  primary,
+  whiteTitle,
+  onPress,
+}) => {
   var primary
   var backWhite
 
@@ -14,7 +22,7 @@ const Header = ({ title, back, backBlack, backWhite, primary, whiteTitle }) => {
           styles.container,
           primary ? styles.primaryColor : styles.whiteColor,
         ]}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={onPress} style={styles.button}>
           <Text
             style={[
               styles.buttonContainer,

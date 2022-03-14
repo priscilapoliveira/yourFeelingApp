@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   buttonContainer: {
-    paddingHorizontal: metrics.doublePixel + 4,
+    paddingHorizontal: metrics.triplePixel + 4,
   },
   textContainer: {
     paddingHorizontal: metrics.fiveFoldPixel + metrics.pixel,
@@ -23,13 +23,13 @@ const styles = StyleSheet.create({
 
   backBlack: {
     textAlign: 'center',
-    fontSize: metrics.pixel + 4,
+    fontSize: metrics.doublePixel + 4,
     color: colors.black,
     fontWeight: 'bold',
   },
   backWhite: {
     textAlign: 'center',
-    fontSize: metrics.pixel + 4,
+    fontSize: metrics.doublePixel + 4,
     color: colors.white,
     fontWeight: 'bold',
   },

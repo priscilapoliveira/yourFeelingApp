@@ -8,6 +8,7 @@ import Header from '../../components/Header'
 import styles from './styles'
 
 const RateFeelings = () => {
+  const navigation = useNavigation()
   const route = useRoute()
   useEffect(() => {
     let eita = ({ emoji, text } = route.params)
@@ -16,7 +17,7 @@ const RateFeelings = () => {
 
   return (
     <>
-      <Header backBlack back={'voltar'} />
+      <Header backBlack back={'<'} onPress={navigation.goBack} />
       <View></View>
     </>
   )
