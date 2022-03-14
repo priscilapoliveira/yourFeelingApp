@@ -3,9 +3,9 @@ import { Text, TouchableOpacity } from 'react-native'
 
 import styles from './styles'
 
-const Button = ({ text, onPress, primary, primaryText }) => {
+const Button = ({ text, onPress, primary, primaryTextButton }) => {
   var primary
-  var primaryText
+  var primaryTextButton
 
   return (
     <>
@@ -17,7 +17,9 @@ const Button = ({ text, onPress, primary, primaryText }) => {
         onPress={onPress}>
         <Text
           style={[
-            primaryText ? styles.primaryTextButton : styles.whiteTextButton,
+            primaryTextButton
+              ? styles.primaryTextButton
+              : styles.whiteTextButton,
           ]}>
           {text}
         </Text>

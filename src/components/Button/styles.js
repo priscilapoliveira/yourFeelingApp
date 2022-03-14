@@ -1,13 +1,23 @@
-import { StyleSheet, Dimensions } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { metrics, colors } from '../../styles'
 
 const styles = StyleSheet.create({
   container: {
-    with: metrics.fiveFoldPixel * 3,
-    height: metrics.fiveFoldPixel + 30,
-    padding: metrics.doublePixel,
+    width: metrics.fiveFoldPixel * 8,
+    height: metrics.triplePixel * 2.5,
+    padding: metrics.doublePixel + 2,
     borderRadius: metrics.pixel,
     marginHorizontal: metrics.pixel,
+    marginTop: metrics.fourFoldPixel,
+    backgroundColor: colors.primary,
+    alignSelf: 'center',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   primaryButton: {
     backgroundColor: colors.primary,
@@ -17,13 +27,13 @@ const styles = StyleSheet.create({
   },
   primaryTextButton: {
     textAlign: 'center',
-    fontSize: metrics.doublePixel,
+    fontSize: metrics.doublePixel + 2,
     color: colors.primary,
     fontWeight: 'bold',
   },
   whiteTextButton: {
     textAlign: 'center',
-    fontSize: metrics.doublePixel,
+    fontSize: metrics.doublePixel + 2,
     color: colors.white,
     fontWeight: 'bold',
   },

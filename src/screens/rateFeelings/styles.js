@@ -31,6 +31,22 @@ const styles = StyleSheet.create({
     color: colors.primaryDark,
     fontWeight: 'bold',
   },
+  contentRate: {
+    height: metrics.fiveFoldPixel * 2,
+    width: width,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: metrics.fourFoldPixel,
+    marginBottom: metrics.doublePixel,
+  },
+  heartImage: {
+    marginTop: 50,
+    width: metrics.fiveFoldPixel,
+    alignSelf: 'center',
+    height: metrics.fiveFoldPixel,
+    resizeMode: 'contain',
+  },
 })
 
 export default styles
