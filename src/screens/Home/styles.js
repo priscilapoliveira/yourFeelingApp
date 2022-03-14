@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    padding: metrics.pixel,
+    paddingHorizontal: metrics.pixel,
+    paddingTop: metrics.triplePixel,
   },
   content: {
     backgroundColor: colors.primary,

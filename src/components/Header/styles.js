@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingTop: metrics.fiveFoldPixel + 15,
-    paddingBottom: metrics.pixel + 4,
   },
   whitetitle: {
     textAlign: 'center',
