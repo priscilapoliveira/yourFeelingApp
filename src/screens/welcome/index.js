@@ -12,16 +12,17 @@ import styles from './styles'
 
 const Welcome = () => {
   const navigation = useNavigation()
+
+  function navigate() {
+    navigation.navigate('Home')
+  }
+
   return (
     <>
       <View style={styles.container}>
         <Image source={welcome} style={styles.image} />
         <Text style={styles.title}>Welcome, shall we begin?</Text>
-        <Button
-          onPress={navigation.navigate('Home')}
-          primaryTextButton
-          text={'Go'}
-        />
+        <Button onPress={() => navigate()} primaryTextButton text={'Go'} />
       </View>
     </>
   )
