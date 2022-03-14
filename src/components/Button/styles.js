@@ -3,8 +3,8 @@ import { metrics, colors } from '../../styles'
 
 const styles = StyleSheet.create({
   container: {
-    with: '90%',
-    height: metrics.fiveFoldPixel * 3,
+    with: metrics.fiveFoldPixel * 3,
+    height: metrics.fiveFoldPixel + 30,
     padding: metrics.doublePixel,
     borderRadius: metrics.pixel,
     marginHorizontal: metrics.pixel,
